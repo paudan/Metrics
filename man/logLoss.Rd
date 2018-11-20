@@ -13,6 +13,8 @@ class and 0 for the negative class.}
 \item{predicted}{A numeric vector of predicted values, where the values correspond
 to the probabilities that each observation in \code{actual}
 belongs to the positive class}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{logLoss} computes the average log loss between two numeric vectors.

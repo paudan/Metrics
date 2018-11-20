@@ -11,6 +11,8 @@ msle(actual, predicted, na.rm = F)
 
 \item{predicted}{The predicted non-negative vector, where each element in the vector
 is a prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{msle} computes the average of squared log error between two numeric vectors.
