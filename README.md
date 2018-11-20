@@ -1,6 +1,6 @@
 # Metrics
 
-![Build Status](https://travis-ci.org/mfrasco/Metrics.png)
+![Build Status](https://travis-ci.org/paudan/Metrics.svg?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/Metrics)](https://cran.r-project.org/package=Metrics)
 [![Downloads](http://cranlogs.r-pkg.org/badges/Metrics)](https://cran.rstudio.com/web/packages/Metrics/)
 
