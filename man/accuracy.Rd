@@ -4,13 +4,15 @@
 \alias{accuracy}
 \title{Accuracy}
 \usage{
-accuracy(actual, predicted)
+accuracy(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth vector, where elements of the vector can be any variable type.}
 
 \item{predicted}{The predicted vector, where elements of the vector represent a
 prediction for the corresponding value in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{accuracy} is defined as the proportion of elements in \code{actual} that are

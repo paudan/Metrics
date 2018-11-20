@@ -4,13 +4,15 @@
 \alias{explained_variation}
 \title{Explained Variation}
 \usage{
-explained_variation(actual, predicted)
+explained_variation(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth numeric vector.}
 
 \item{predicted}{The predicted numeric vector, where each element in the vector
 is a prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{explained_variation} computes the percentage of variation in one numeric vector

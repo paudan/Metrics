@@ -4,13 +4,15 @@
 \alias{rae}
 \title{Relative Absolute Error}
 \usage{
-rae(actual, predicted)
+rae(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth numeric vector.}
 
 \item{predicted}{The predicted numeric vector, where each element in the vector
 is a prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{rae} computes the relative absolute error between two numeric vectors.
@@ -23,7 +25,7 @@ predicted the mean for every data point.
 \examples{
 actual <- c(1.1, 1.9, 3.0, 4.4, 5.0, 5.6)
 predicted <- c(0.9, 1.8, 2.5, 4.5, 5.0, 6.2)
-rrse(actual, predicted)
+rae(predicted, actual)
 }
 \seealso{
 \code{\link{rse}} \code{\link{rrse}}

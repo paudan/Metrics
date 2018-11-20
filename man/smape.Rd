@@ -4,13 +4,18 @@
 \alias{smape}
 \title{Symmetric Mean Absolute Percentage Error}
 \usage{
-smape(actual, predicted)
+smape(actual, predicted, na.rm = F, zero.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth numeric vector.}
 
 \item{predicted}{The predicted numeric vector, where each element in the vector
 is a prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
+
+\item{zero.rm}{If set to \code{True}, will remove zero values of both \code{actual} and \code{predicted}.
+Might be useful if at least some approximation is required when \code{actual} values contain 0}
 }
 \description{
 \code{smape} computes the symmetric mean absolute percentage error between

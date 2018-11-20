@@ -4,7 +4,7 @@
 \alias{msle}
 \title{Mean Squared Log Error}
 \usage{
-msle(actual, predicted)
+msle(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth non-negative vector}

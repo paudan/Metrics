@@ -8,6 +8,8 @@
 
 \item{predicted}{The predicted vector, where elements of the vector represent a
 prediction for the corresponding value in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 This object provides the documentation for the parameters of functions

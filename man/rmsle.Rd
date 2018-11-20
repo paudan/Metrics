@@ -4,7 +4,7 @@
 \alias{rmsle}
 \title{Root Mean Squared Log Error}
 \usage{
-rmsle(actual, predicted)
+rmsle(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth non-negative vector}

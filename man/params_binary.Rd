@@ -10,6 +10,8 @@ class and 0 for the negative class.}
 \item{predicted}{The predicted binary numeric vector containing 1 for the positive
 class and 0 for the negative class. Each element represents the
 prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 This object provides the documentation for the parameters of functions
