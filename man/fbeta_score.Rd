@@ -4,7 +4,7 @@
 \alias{fbeta_score}
 \title{F-beta Score}
 \usage{
-fbeta_score(actual, predicted, beta = 1)
+fbeta_score(actual, predicted, beta = 1, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth binary numeric vector containing 1 for the positive
@@ -14,12 +14,14 @@ class and 0 for the negative class.}
 class and 0 for the negative class. Each element represents the
 prediction for the corresponding element in \code{actual}.}
 
-\item{beta}{A non-negative real number controlling how close the F-beta score is to 
-either Precision or Recall. When \code{beta} is at the default of 1, 
+\item{beta}{A non-negative real number controlling how close the F-beta score is to
+either Precision or Recall. When \code{beta} is at the default of 1,
 the F-beta Score is exactly an equally weighted harmonic mean.
-The F-beta score will weight toward Precision when \code{beta} is less 
+The F-beta score will weight toward Precision when \code{beta} is less
 than one.  The F-beta score will weight toward Recall when \code{beta} is
 greater than one.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{fbeta_score} computes a weighted harmonic mean of Precision and Recall.

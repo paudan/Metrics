@@ -273,6 +273,8 @@ smape <- function(actual, predicted, na.rm = F, zero.rm = F) {
 #' @param actual The ground truth non-negative vector
 #' @param predicted The predicted non-negative vector, where each element in the vector
 #'                  is a prediction for the corresponding element in \code{actual}.
+#' @param na.rm  Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}
+#'
 #' @export
 #' @seealso \code{\link{msle}} \code{\link{rmsle}}
 #' @examples

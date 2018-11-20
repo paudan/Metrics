@@ -4,7 +4,7 @@
 \alias{logLoss}
 \title{Mean Log Loss}
 \usage{
-logLoss(actual, predicted)
+logLoss(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth binary numeric vector containing 1 for the positive

@@ -4,7 +4,7 @@
 \alias{auc}
 \title{Area under the ROC curve (AUC)}
 \usage{
-auc(actual, predicted)
+auc(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth binary numeric vector containing 1 for the positive
@@ -15,6 +15,8 @@ to the observations most believed to be in the negative class
 and the largest values indicate the observations most believed
 to be in the positive class. Each element represents the
 prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{auc} computes the area under the receiver-operator characteristic curve (AUC).

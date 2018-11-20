@@ -4,13 +4,15 @@
 \alias{mae}
 \title{Mean Absolute Error}
 \usage{
-mae(actual, predicted)
+mae(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth numeric vector.}
 
 \item{predicted}{The predicted numeric vector, where each element in the vector
 is a prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{mae} computes the average absolute difference between two numeric vectors.

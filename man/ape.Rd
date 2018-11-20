@@ -4,13 +4,18 @@
 \alias{ape}
 \title{Absolute Percent Error}
 \usage{
-ape(actual, predicted)
+ape(actual, predicted, na.rm = F, zero.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth numeric vector.}
 
 \item{predicted}{The predicted numeric vector, where each element in the vector
 is a prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
+
+\item{zero.rm}{If set to \code{True}, will remove \code{actual} values which are 0.
+Might be useful if at least some approximation is required when \code{actual} values contain 0}
 }
 \description{
 \code{ape} computes the elementwise absolute percent difference between two numeric

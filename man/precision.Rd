@@ -4,7 +4,7 @@
 \alias{precision}
 \title{Precision}
 \usage{
-precision(actual, predicted)
+precision(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth binary numeric vector containing 1 for the positive
@@ -13,11 +13,13 @@ class and 0 for the negative class.}
 \item{predicted}{The predicted binary numeric vector containing 1 for the positive
 class and 0 for the negative class. Each element represents the
 prediction for the corresponding element in \code{actual}.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be \code{NA}}
 }
 \description{
 \code{precision} computes proportion of observations predicted to be in the
                  positive class (i.e. the element in \code{predicted} equals 1)
-                 that actually belong to the positive class (i.e. the element 
+                 that actually belong to the positive class (i.e. the element
                  in \code{actual} equals 1)
 }
 \examples{

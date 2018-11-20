@@ -4,7 +4,7 @@
 \alias{sle}
 \title{Squared Log Error}
 \usage{
-sle(actual, predicted)
+sle(actual, predicted, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth non-negative vector}

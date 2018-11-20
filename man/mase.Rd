@@ -4,7 +4,7 @@
 \alias{mase}
 \title{Mean Absolute Scaled Error}
 \usage{
-mase(actual, predicted, step_size = 1)
+mase(actual, predicted, step_size = 1, na.rm = F)
 }
 \arguments{
 \item{actual}{The ground truth numeric vector ordered in time, with most recent
@@ -15,15 +15,17 @@ of the vector represents a prediction for the corresponding
 element of \code{actual}.}
 
 \item{step_size}{A positive integer that specifies how many observations to look back
-in time in order to compute the naive forecast. The default is
-\code{1}, which means that the naive forecast for the current time
-period is the actual value of the previous period.
+                 in time in order to compute the naive forecast. The default is
+                 \code{1}, which means that the naive forecast for the current time
+                 period is the actual value of the previous period.
 
-However, if \code{actual} and \code{predictions} were quarterly
-predictions over many years, letting \code{step_size = 4}, would
-mean that the naive forecast for the current time period would
-be the actual value from the same quarter last year. In this way,
-\code{mase} can account for seasonality.}
+                 However, if \code{actual} and \code{predictions} were quarterly
+                 predictions over many years, letting \code{step_size = 4}, would
+                 mean that the naive forecast for the current time period would
+                 be the actual value from the same quarter last year. In this way,
+                 \code{mase} can account for seasonality.}
+
+\item{na.rm}{Whether to remove NA/NaN values; if those are not removed, output will usually be NA}
 }
 \description{
 \code{mase} computes the mean absolute scaled error between two numeric
