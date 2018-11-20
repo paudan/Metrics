@@ -56,10 +56,16 @@ auc <- function(actual, predicted, na.rm = F) {
 #' actual <- c(1, 1, 1, 0, 0, 0)
 #' predicted <- c(0.9, 0.8, 0.4, 0.5, 0.3, 0.2)
 #' ll(actual, predicted)
-ll <- function(actual, predicted) {
-    score <- -(actual * log(predicted) + (1 - actual) * log(1 - predicted))
-    score[actual == predicted] <- 0
-    score[is.nan(score)] <- Inf
+ll <- function(actual, predicted, na.rm=F) {
+  ind <- rep(T, length(actual))
+  if (na.rm) {
+    ind <- !(is.na(actual) | is.na(predicted))
+  }
+  actual <- actual[ind]
+  predicted <- predicted[ind]
+  score <- -(actual * log(predicted) + (1 - actual) * log(1 - predicted))
+  score[actual == predicted] <- 0
+  score[is.nan(score)] <- Inf
     return(score)
 }
 
