@@ -349,7 +349,7 @@ rse <- function (actual, predicted, na.rm = F) {
   if (na.rm) {
     ind <- !(is.na(actual) | is.na(predicted))
   }
-  return(sse(actual[ind], predicted[ind]) / sse(actual[ind], rep(mean(actual[ind]), length(actual[ind]))))
+  return(sse(actual[ind], predicted[ind]) / sse(actual[ind], rep(mean(actual[ind], na.rm = na.rm), length(actual[ind]))))
 }
 
 #' Root Relative Squared Error
@@ -391,7 +391,7 @@ rae <- function(actual, predicted, na.rm = F) {
   if (na.rm) {
     ind <- !(is.na(actual) | is.na(predicted))
   }
-  return(sum(ae(actual[ind], predicted[ind])) / sum(ae(actual[ind], rep(mean(actual[ind]), length(actual[ind])))))
+  return(sum(ae(actual[ind], predicted[ind])) / sum(ae(actual[ind], rep(mean(actual[ind], na.rm = na.rm), length(actual[ind])))))
 }
 
 #' Explained Variation
